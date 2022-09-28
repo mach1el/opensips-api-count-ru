@@ -1,8 +1,8 @@
 # opensips-count-ext-api
 This is simple Flask API to check how many times Requester send request to the extension (phone number)<br>
 When getting request from Requesters to `$rU`, the API will check `$rU` from `acc` table in opensips database,if `sip_code` in `[200,408,486,487,600]` it will be counted at one and Requester just have max 5 connection to the extension.<br>
-You can modify condition as you wish on [pyapp/app.py](https://github.com/mach1el/opensips-count-ext-api/pyapp/app.py) at line `46`.<br>
-Due it will check data from database,hence you must define your database servers in [pyapp/servers](https://github.com/mach1el/opensips-count-ext-api/pyapp/servers)
+You can modify condition as you wish on [pyapp/app.py](pyapp/app.py) at line `46`.<br>
+Due it will check data from database,hence you must define your database servers in [pyapp/servers](pyapp/servers)
 
 
 ## requirement
