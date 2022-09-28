@@ -39,7 +39,7 @@ modparam("rest_client", "ssl_verifyhost", 0)
 
 route {
 ...
-$var(request) = rest_get("http://10.10.94.129:2000/check?from=worker1&extension=$rU",
+$var(request) = rest_get("http://10.10.10.10:2000/check?from=worker1&extension=$rU",
                   $var(data),$var(ct),$var(rcode));
 $json(data) := $var(data);
 $var(status) = $json(data[0]/status);
