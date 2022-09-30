@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+  opensips_api:
+    container_name: ops-api
+    hostname: ops-api
+    build: .
+    ports:
+      - 2000:2000
+    environment:
+      - API_AUTOCONF=true
+      - API_DB_HOST=10.10.92.170
+      - API_DB_USER=opensips
+      - API_DB_PASSWORD=opensipsrw
+    restart: always
