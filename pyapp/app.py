@@ -18,13 +18,13 @@ def count(data):
 
 def request_db(requester,extension):
   try:
-    server = parser['vtfe']
+    node = parser['node']
     conn = psycopg2.connect(
-      host     = server['db_host'],
-      port     = server['db_port'],
-      user     = server['db_user'],
-      password = server['db_password'],
-      database = server['db_name']
+      host     = node['db_host'],
+      port     = node['db_port'],
+      user     = node['db_user'],
+      password = node['db_password'],
+      database = node['db_name']
     )
     cur = conn.cursor()
     cur.execute("select sip_code from acc where exten='%s'" % extension)
