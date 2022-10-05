@@ -43,7 +43,7 @@ def checker():
   requester = args.get('from')
   phone_num = args.get('extension')
   resp = request_db(requester,phone_num)
-  if resp == 5:
+  if resp >= 5:
     return make_response(jsonify({'status' : 'FAILED'}),504)
   else:
     return make_response(jsonify({'status' : 'PASSED'}),200)
